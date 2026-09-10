@@ -1,0 +1,856 @@
+
+/* =================================
+   COLORES DE FRUTÉA
+================================= */
+
+:root {
+
+    --naranja: #f47b20;
+    --naranja-claro: #ff9b52;
+
+    --azul: #4f8195;
+    --azul-oscuro: #396b7c;
+
+    --beige: #f8ecd8;
+    --beige-claro: #fffaf0;
+
+    --marron: #795548;
+
+    --texto: #4b3b30;
+    --texto-suave: #75685e;
+
+    --blanco: #ffffff;
+}
+
+
+
+/* =================================
+   CONFIGURACIÓN GENERAL
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: var(--beige-claro);
+
+    color: var(--texto);
+
+    line-height: 1.6;
+
+}
+
+
+
+/* =================================
+   HEADER
+================================= */
+
+header {
+
+    width: 100%;
+
+    background: rgba(255, 250, 240, 0.97);
+
+    min-height: 100px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 10px 7%;
+
+    border-bottom: 2px solid var(--beige);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow:
+        0 3px 15px rgba(121, 85, 72, 0.08);
+
+}
+
+
+
+/* LOGO */
+
+.logo {
+
+    width: 145px;
+
+    height: auto;
+
+    display: block;
+
+    transition: 0.3s ease;
+
+}
+
+
+.logo:hover {
+
+    transform: scale(1.07);
+
+}
+
+
+
+/* =================================
+   MENÚ
+================================= */
+
+nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+
+nav a {
+
+    text-decoration: none;
+
+    color: var(--marron);
+
+    font-weight: bold;
+
+    font-size: 16px;
+
+    position: relative;
+
+    transition: 0.3s ease;
+
+}
+
+
+nav a::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+
+    height: 3px;
+
+    left: 50%;
+
+    bottom: -7px;
+
+    background: var(--naranja);
+
+    border-radius: 20px;
+
+    transition: 0.3s ease;
+
+}
+
+
+nav a:hover {
+
+    color: var(--naranja);
+
+}
+
+
+nav a:hover::after {
+
+    width: 100%;
+
+    left: 0;
+
+}
+
+
+
+/* CONTACTO ACTIVO */
+
+nav a.activo {
+
+    color: var(--naranja);
+
+}
+
+
+nav a.activo::after {
+
+    width: 100%;
+
+    left: 0;
+
+}
+
+
+
+/* =================================
+   SECCIÓN CONTACTO
+================================= */
+
+.contacto {
+
+    max-width: 1300px;
+
+    margin: auto;
+
+    padding: 80px 7% 100px;
+
+}
+
+
+
+/* ENCABEZADO */
+
+.contacto-header {
+
+    text-align: center;
+
+    margin-bottom: 60px;
+
+}
+
+
+.etiqueta {
+
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    background: var(--beige);
+
+    color: var(--naranja);
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+
+    border: 1px solid #f1d7b5;
+
+}
+
+
+.contacto-header h1 {
+
+    font-size: clamp(40px, 6vw, 65px);
+
+    color: var(--texto);
+
+    margin-bottom: 15px;
+
+    font-weight: 900;
+
+}
+
+
+.contacto-header p {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    color: var(--texto-suave);
+
+    font-size: 17px;
+
+}
+
+
+
+/* =================================
+   CONTENEDOR
+================================= */
+
+.contacto-contenedor {
+
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 40px;
+
+    align-items: stretch;
+
+}
+
+
+
+/* =================================
+   INFORMACIÓN
+================================= */
+
+.informacion-contacto {
+
+    background: var(--azul);
+
+    color: white;
+
+    padding: 45px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 35px rgba(79, 129, 149, 0.20);
+
+}
+
+
+.informacion-contacto h2 {
+
+    font-size: 35px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.informacion-contacto > p {
+
+    color: rgba(255, 255, 255, 0.90);
+
+    margin-bottom: 35px;
+
+}
+
+
+
+/* DATOS */
+
+.dato-contacto {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.icono {
+
+    width: 55px;
+
+    height: 55px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: white;
+
+    border-radius: 50%;
+
+    font-size: 25px;
+
+}
+
+
+.dato-contacto h3 {
+
+    font-size: 17px;
+
+    margin-bottom: 3px;
+
+}
+
+
+.dato-contacto p {
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 14px;
+
+}
+
+
+
+/* =================================
+   FORMULARIO
+================================= */
+
+.formulario-contenedor {
+
+    background: white;
+
+    padding: 45px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 12px 35px rgba(121, 85, 72, 0.12);
+
+    border: 1px solid rgba(121, 85, 72, 0.08);
+
+}
+
+
+.formulario {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+
+
+/* CAMPOS */
+
+.campo {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+
+.campo label {
+
+    color: var(--texto);
+
+    font-weight: bold;
+
+    font-size: 15px;
+
+}
+
+
+.campo input,
+.campo select,
+.campo textarea {
+
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 2px solid var(--beige);
+
+    border-radius: 12px;
+
+    background: var(--beige-claro);
+
+    color: var(--texto);
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.3s ease;
+
+}
+
+
+.campo textarea {
+
+    resize: vertical;
+
+    min-height: 130px;
+
+}
+
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+
+    border-color: var(--naranja);
+
+    background: white;
+
+    box-shadow:
+        0 0 0 4px rgba(244, 123, 32, 0.10);
+
+}
+
+
+
+/* =================================
+   CHECKBOX
+================================= */
+
+.check {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.check input {
+
+    width: 18px;
+
+    height: 18px;
+
+    accent-color: var(--naranja);
+
+    cursor: pointer;
+
+}
+
+
+.check label {
+
+    color: var(--texto-suave);
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+}
+
+
+
+/* =================================
+   BOTÓN
+================================= */
+
+.btn-enviar {
+
+    width: 100%;
+
+    border: none;
+
+    padding: 15px 25px;
+
+    border-radius: 30px;
+
+    background: var(--naranja);
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+    box-shadow:
+        0 8px 20px rgba(244, 123, 32, 0.25);
+
+}
+
+
+.btn-enviar:hover {
+
+    background: var(--naranja-claro);
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 25px rgba(244, 123, 32, 0.30);
+
+}
+
+
+
+/* =================================
+   FOOTER
+================================= */
+
+footer {
+    background: var(--azul-oscuro);
+
+    color: white;
+
+    padding: 55px 7% 20px;
+}
+
+.footer-contenido {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+
+    gap: 50px;
+}
+
+.logo-footer {
+    width: 130px;
+
+    margin-bottom: 15px;
+
+    background: white;
+
+    padding: 8px;
+
+    border-radius: 12px;
+}
+
+.footer-marca p,
+.footer-info p {
+    color: rgba(255, 255, 255, 0.80);
+
+    font-size: 13px;
+
+    max-width: 300px;
+}
+
+.footer-contenido h3 {
+    color: white;
+
+    font-size: 17px;
+
+    margin-bottom: 15px;
+}
+
+.footer-enlaces {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 8px;
+}
+
+.footer-enlaces a {
+    color: rgba(255, 255, 255, 0.80);
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: color 0.3s ease;
+}
+
+.footer-enlaces a:hover {
+    color: var(--naranja-claro);
+}
+
+
+/* Copyright */
+
+.copyright {
+    max-width: 1200px;
+
+    margin: 45px auto 0;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.20);
+
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 12px;
+}
+
+
+
+
+/* =================================
+   RESPONSIVE TABLET
+================================= */
+
+@media (max-width: 850px) {
+
+    header {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 15px;
+
+    }
+
+
+    nav {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 18px;
+
+    }
+
+
+    .contacto {
+
+        padding: 60px 5% 80px;
+
+    }
+
+
+    .contacto-contenedor {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+
+/* =================================
+   RESPONSIVE CELULAR
+================================= */
+
+@media (max-width: 550px) {
+
+    header {
+
+        padding: 12px;
+
+    }
+
+
+    .logo {
+
+        width: 120px;
+
+    }
+
+
+    nav {
+
+        gap: 12px;
+
+    }
+
+
+    nav a {
+
+        font-size: 13px;
+
+    }
+
+
+    .contacto {
+
+        padding: 45px 20px 60px;
+
+    }
+
+
+    .contacto-header h1 {
+
+        font-size: 42px;
+
+    }
+
+
+    .contacto-header p {
+
+        font-size: 15px;
+
+    }
+
+
+    .informacion-contacto {
+
+        padding: 30px 25px;
+
+    }
+
+
+    .informacion-contacto h2 {
+
+        font-size: 29px;
+
+    }
+
+
+    .formulario-contenedor {
+
+        padding: 25px 20px;
+
+    }
+
+
+    .dato-contacto {
+
+        align-items: flex-start;
+
+    }
+
+}
+```
+/* =================================
+   IMAGEN DE FRUTAS - CONTACTO
+================================= */
+
+.imagen-contacto {
+
+    width: 100%;
+
+    height: 230px;
+
+    margin-bottom: 30px;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.15);
+
+}
+
+
+.imagen-contacto img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.4s ease;
+
+}
+
+
+.imagen-contacto:hover img {
+
+    transform: scale(1.06);
+
+}

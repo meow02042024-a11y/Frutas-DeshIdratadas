@@ -1,0 +1,662 @@
+/* ================================
+   COLORES DE LA MARCA
+================================ */
+
+:root {
+
+    --naranja: #f47b20;
+    --naranja-claro: #ff9b52;
+
+    --azul: #4f8195;
+    --azul-oscuro: #396b7c;
+
+    --beige: #f8ecd8;
+    --beige-claro: #fffaf0;
+
+    --marron: #795548;
+
+    --texto: #4b3b30;
+    --texto-suave: #75685e;
+
+    --blanco: #ffffff;
+}
+
+
+/* ================================
+   CONFIGURACIÓN GENERAL
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: var(--beige-claro);
+
+    color: var(--texto);
+
+    line-height: 1.6;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+header {
+
+    width: 100%;
+
+    background: rgba(255, 250, 240, 0.97);
+
+    min-height: 100px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 10px 7%;
+
+    border-bottom: 2px solid var(--beige);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow:
+        0 3px 15px rgba(121, 85, 72, 0.08);
+}
+
+
+/* LOGOTIPO */
+
+.logo {
+
+    width: 145px;
+
+    height: auto;
+
+    display: block;
+
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+
+    transform: scale(1.07);
+}
+
+
+/* ================================
+   MENÚ
+================================ */
+
+nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+nav a {
+
+    text-decoration: none;
+
+    color: var(--marron);
+
+    font-weight: bold;
+
+    font-size: 16px;
+
+    position: relative;
+
+    transition: 0.3s ease;
+}
+
+nav a::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+
+    height: 3px;
+
+    left: 50%;
+
+    bottom: -7px;
+
+    background: var(--naranja);
+
+    border-radius: 20px;
+
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+
+    color: var(--naranja);
+}
+
+nav a:hover::after,
+nav a.activo::after {
+
+    width: 100%;
+
+    left: 0;
+}
+
+nav a.activo {
+
+    color: var(--naranja);
+}
+
+
+/* ================================
+   CONTENEDOR BENEFICIOS
+================================ */
+
+.beneficios {
+
+    max-width: 1300px;
+
+    margin: auto;
+
+    padding: 90px 7%;
+}
+
+
+/* ================================
+   ENCABEZADO
+================================ */
+
+.beneficios-header {
+
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+
+.etiqueta {
+
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    background: var(--beige);
+
+    color: var(--naranja);
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+
+    border: 1px solid #f1d7b5;
+}
+
+.beneficios-header h1 {
+
+    color: var(--texto);
+
+    font-size: clamp(40px, 5vw, 55px);
+
+    margin: 12px 0;
+}
+
+.beneficios-header p {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    color: var(--texto-suave);
+
+    font-size: 17px;
+}
+
+
+/* ================================
+   GRID DE BENEFICIOS
+================================ */
+
+.beneficios-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+
+    margin-bottom: 70px;
+}
+
+
+/* ================================
+   TARJETAS
+================================ */
+
+.tarjeta-beneficio {
+
+    background: var(--blanco);
+
+    padding: 30px;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 8px 25px rgba(121, 85, 72, 0.10);
+
+    border: 1px solid rgba(121, 85, 72, 0.08);
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition: 0.3s ease;
+}
+
+.tarjeta-beneficio:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 20px 40px rgba(121, 85, 72, 0.18);
+}
+
+
+/* ================================
+   NÚMERO
+================================ */
+
+.numero-beneficio {
+
+    width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--naranja);
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 5px 12px rgba(244, 123, 32, 0.25);
+}
+
+
+/* ================================
+   ICONO
+================================ */
+
+.icono-beneficio {
+
+    width: 65px;
+
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--beige);
+
+    border-radius: 50%;
+
+    font-size: 32px;
+
+    margin-bottom: 20px;
+
+    transition: 0.3s ease;
+}
+
+.tarjeta-beneficio:hover .icono-beneficio {
+
+    transform: scale(1.08);
+}
+
+
+/* ================================
+   TEXTO
+================================ */
+
+.tarjeta-beneficio h2 {
+
+    color: var(--naranja);
+
+    font-size: 23px;
+
+    margin-bottom: 10px;
+
+    font-weight: 800;
+}
+
+.tarjeta-beneficio p {
+
+    color: var(--texto-suave);
+
+    font-size: 15px;
+
+    margin-bottom: 5px;
+}
+
+
+/* ================================
+   SECCIÓN FINAL
+================================ */
+
+.beneficio-final {
+
+    background: var(--beige);
+
+    border-radius: 25px;
+
+    padding: 60px 40px;
+
+    text-align: center;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(121, 85, 72, 0.08);
+}
+
+.final-contenido {
+
+    max-width: 700px;
+
+    margin: auto;
+}
+
+.beneficio-final h2 {
+
+    color: var(--texto);
+
+    font-size: clamp(32px, 5vw, 45px);
+
+    margin: 12px 0;
+}
+
+.beneficio-final p {
+
+    color: var(--texto-suave);
+
+    font-size: 17px;
+
+    margin-bottom: 30px;
+}
+
+
+/* ================================
+   BOTÓN
+================================ */
+
+.boton {
+
+    display: inline-block;
+
+    background: var(--azul);
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 14px 30px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: 0.3s ease;
+
+    box-shadow:
+        0 8px 20px rgba(79, 129, 149, 0.2);
+}
+
+.boton:hover {
+
+    background: var(--azul-oscuro);
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 25px rgba(79, 129, 149, 0.3);
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    background: var(--azul-oscuro);
+
+    color: white;
+
+    padding: 55px 7% 20px;
+}
+
+.footer-contenido {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+
+    gap: 50px;
+}
+
+.logo-footer {
+    width: 130px;
+
+    margin-bottom: 15px;
+
+    background: white;
+
+    padding: 8px;
+
+    border-radius: 12px;
+}
+
+.footer-marca p,
+.footer-info p {
+    color: rgba(255, 255, 255, 0.80);
+
+    font-size: 13px;
+
+    max-width: 300px;
+}
+
+.footer-contenido h3 {
+    color: white;
+
+    font-size: 17px;
+
+    margin-bottom: 15px;
+}
+
+.footer-enlaces {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 8px;
+}
+
+.footer-enlaces a {
+    color: rgba(255, 255, 255, 0.80);
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: color 0.3s ease;
+}
+
+.footer-enlaces a:hover {
+    color: var(--naranja-claro);
+}
+
+
+/* Copyright */
+
+.copyright {
+    max-width: 1200px;
+
+    margin: 45px auto 0;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.20);
+
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 12px;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 1000px) {
+
+    .beneficios-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+/* ================================
+   CELULAR
+================================ */
+
+@media (max-width: 700px) {
+
+    header {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 15px;
+    }
+
+    nav {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 18px;
+    }
+
+
+    .beneficios {
+
+        padding: 60px 20px;
+    }
+
+
+    .beneficios-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+
+    .tarjeta-beneficio {
+
+        padding: 25px;
+    }
+
+
+    .beneficio-final {
+
+        padding: 45px 25px;
+    }
+}
+
+
+/* ================================
+   CELULAR PEQUEÑO
+================================ */
+
+@media (max-width: 550px) {
+
+    .logo {
+
+        width: 120px;
+    }
+
+    nav {
+
+        gap: 12px;
+    }
+
+    nav a {
+
+        font-size: 13px;
+    }
+
+    .beneficios-header h1 {
+
+        font-size: 40px;
+    }
+
+    .beneficios-header p {
+
+        font-size: 15px;
+    }
+
+    .tarjeta-beneficio h2 {
+
+        font-size: 21px;
+    }
+
+    .tarjeta-beneficio p {
+
+        font-size: 14px;
+    }
+}
+```

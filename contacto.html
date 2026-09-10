@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contacto | Frutéa Deshidratada</title>
+
+    <link rel="icon" type="image/png" href="logo-frutea.png">
+
+    <link rel="stylesheet" href="contacto.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         HEADER
+    ================================= -->
+
+    <header>
+
+        <a href="index - copia - copia.html" aria-label="Volver al inicio">
+
+            <img
+                src="img/frutas.png"
+                alt="Logo Frutéa Deshidratada"
+                class="logo"
+            >
+
+        </a>
+
+
+        <nav>
+
+            <a href="index - copia - copia.html">
+                Inicio
+            </a>
+
+            <a href="index - copia - copia.html#catalogo">
+                Productos
+            </a>
+
+            <a href="index - copia - copia.html#beneficios">
+                Beneficios
+            </a>
+
+            <a href="contacto.html" class="activo">
+                Contacto
+            </a>
+
+            <a href="nosotros.html">
+                Nosotros
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =================================
+         CONTACTO
+    ================================= -->
+
+    <main class="contacto">
+
+
+        <section class="contacto-header">
+
+            <span class="etiqueta">
+                 Estamos para ayudarte
+            </span>
+
+            <h1>
+                Contáctanos
+            </h1>
+
+            <p>
+                ¿Tienes alguna pregunta, sugerencia o deseas realizar
+                un pedido? Escríbenos y nos pondremos en contacto contigo.
+            </p>
+
+        </section>
+
+
+
+        <section class="contacto-contenedor">
+
+
+            <!-- =================================
+                 INFORMACIÓN DE CONTACTO
+            ================================= -->
+
+            <div class="informacion-contacto">
+
+
+                <!-- IMAGEN DE FRUTAS -->
+
+                <div class="imagen-contacto">
+
+                    <img
+                        src="img/uwufrutas.jpg"
+                        alt="Frutas naturales de Frutéa Deshidratada"
+                    >
+
+                </div>
+
+
+
+                <h2>
+                    ¡Hablemos!
+                </h2>
+
+                <p>
+                    En Frutéa Deshidratada nos interesa conocer tu opinión.
+                    Puedes utilizar este formulario para comunicarte con
+                    nuestro equipo.
+                </p>
+
+
+
+                <!-- CORREO -->
+
+                <div class="dato-contacto">
+
+                    <div>
+
+                        <h3>
+                            Correo electrónico
+                        </h3>
+
+                        <p>
+                            frutea@gmail.com
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TELÉFONO -->
+
+                <div class="dato-contacto">
+
+                    <div>
+
+                        <h3>
+                            Teléfono
+                        </h3>
+
+                        <p>
+                            +51 999 999 999
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ATENCIÓN -->
+
+                <div class="dato-contacto">
+
+                    <div>
+
+                        <h3>
+                            Atención
+                        </h3>
+
+                        <p>
+                            Responderemos tu mensaje lo antes posible.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================
+                 FORMULARIO
+            ================================= -->
+
+            <div class="formulario-contenedor">
+
+                <form
+                    action="#"
+                    method="post"
+                    class="formulario"
+                >
+
+
+                    <div class="campo">
+
+                        <label for="nombre">
+                            Nombre completo
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            placeholder="Escribe tu nombre"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="campo">
+
+                        <label for="correo">
+                            Correo electrónico
+                        </label>
+
+                        <input
+                            type="email"
+                            id="correo"
+                            name="correo"
+                            placeholder="ejemplo@gmail.com"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="campo">
+
+                        <label for="telefono">
+                            Teléfono
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="telefono"
+                            name="telefono"
+                            placeholder="999 999 999"
+                        >
+
+                    </div>
+
+
+
+                    <div class="campo">
+
+                        <label for="motivo">
+                            Motivo de contacto
+                        </label>
+
+                        <select
+                            id="motivo"
+                            name="motivo"
+                            required
+                        >
+
+                            <option value="">
+                                Selecciona una opción
+                            </option>
+
+                            <option value="pedido">
+                                Realizar un pedido
+                            </option>
+
+                            <option value="consulta">
+                                Consulta sobre productos
+                            </option>
+
+                            <option value="sugerencia">
+                                Sugerencia
+                            </option>
+
+                            <option value="reclamo">
+                                Reclamo
+                            </option>
+
+                            <option value="otro">
+                                Otro
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="campo">
+
+                        <label for="mensaje">
+                            Mensaje
+                        </label>
+
+                        <textarea
+                            id="mensaje"
+                            name="mensaje"
+                            rows="6"
+                            placeholder="Escribe aquí tu mensaje..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+
+                    <div class="check">
+
+                        <input
+                            type="checkbox"
+                            id="terminos"
+                            required
+                        >
+
+                        <label for="terminos">
+                            Confirmo que los datos ingresados son correctos.
+                        </label>
+
+                    </div>
+
+
+
+                    <button
+                        type="submit"
+                        class="btn-enviar"
+                    >
+                        Enviar mensaje 
+                    </button>
+
+
+                </form>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+<!-- =================================
+         FOOTER
+    ================================= -->
+
+    <footer>
+
+        <div class="footer-contenido">
+
+            <div class="footer-marca">
+
+                <img src="img/kiki.jpg"
+                    alt="Logo Frutéa Deshidratada"
+                    class="logo-footer">
+
+                <p>
+                    Sabor que enamora, energía que te devora 
+                </p>
+
+            </div>
+
+
+            <div class="footer-enlaces">
+
+                <h3>Enlaces rápidos</h3>
+
+                <a href="index - copia - copia.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="beneficios.html">Beneficios</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="nosotros.html">Nosotros</a>
+
+            </div>
+
+
+            <div class="footer-info">
+
+                <h3>Frutéa</h3>
+
+                <p>
+                    Snacks de frutas deshidratadas
+                    elaborados con ingredientes naturales.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 Frutéa Deshidratada. Todos los derechos reservados.
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
+```

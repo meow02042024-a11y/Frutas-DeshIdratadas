@@ -1,0 +1,789 @@
+/* ================================
+   COLORES DE FRUTÉA
+================================ */
+
+:root {
+
+    --naranja: #f47b20;
+    --naranja-claro: #ff9b52;
+
+    --azul: #4f8195;
+    --azul-oscuro: #396b7c;
+
+    --beige: #f8ecd8;
+    --beige-claro: #fffaf0;
+
+    --marron: #795548;
+
+    --texto: #4b3b30;
+    --texto-suave: #75685e;
+
+    --blanco: #ffffff;
+}
+
+
+/* ================================
+   CONFIGURACIÓN GENERAL
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: var(--beige-claro);
+
+    color: var(--texto);
+
+    line-height: 1.6;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+header {
+
+    width: 100%;
+
+    min-height: 100px;
+
+    background: rgba(255, 250, 240, 0.97);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 10px 7%;
+
+    border-bottom: 2px solid var(--beige);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow:
+        0 3px 15px rgba(121, 85, 72, 0.08);
+}
+
+
+/* LOGO */
+
+.logo {
+
+    width: 145px;
+
+    height: auto;
+
+    display: block;
+
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+
+    transform: scale(1.07);
+}
+
+
+/* ================================
+   MENÚ
+================================ */
+
+nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+}
+nav a {
+
+    text-decoration: none;
+
+    color: var(--marron);
+
+    font-weight: bold;
+
+    font-size: 16px;
+
+    position: relative;
+
+    transition: 0.3s ease;
+}
+
+nav a::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+
+    height: 3px;
+
+    left: 50%;
+
+    bottom: -7px;
+
+    background: var(--naranja);
+
+    border-radius: 20px;
+
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+
+    color: var(--naranja);
+}
+
+nav a:hover::after,
+nav a.activo::after {
+
+    width: 100%;
+
+    left: 0;
+}
+
+nav a.activo {
+
+    color: var(--naranja);
+}
+
+
+/* ================================
+   CONTENEDOR NOSOTROS
+================================ */
+
+.nosotros {
+
+    max-width: 1300px;
+
+    margin: auto;
+
+    padding: 90px 7%;
+}
+
+
+/* ================================
+   ENCABEZADO
+================================ */
+
+.nosotros-header {
+
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+
+.etiqueta {
+
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    background: var(--beige);
+
+    color: var(--naranja);
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #f1d7b5;
+}
+
+.nosotros-header h1 {
+
+    color: var(--texto);
+
+    font-size: clamp(40px, 5vw, 55px);
+
+    margin: 12px 0;
+}
+
+.nosotros-header p {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    color: var(--texto-suave);
+
+    font-size: 17px;
+}
+
+
+/* ================================
+   HISTORIA
+================================ */
+
+.bloque-nosotros {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 30px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 10px 30px rgba(121, 85, 72, 0.10);
+
+    border-left: 6px solid var(--naranja);
+
+    margin-bottom: 45px;
+}
+
+.icono-nosotros {
+
+    width: 70px;
+
+    height: 70px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--beige);
+
+    border-radius: 50%;
+
+    font-size: 35px;
+}
+
+.contenido-nosotros h2 {
+
+    color: var(--naranja);
+
+    font-size: 30px;
+
+    margin-bottom: 15px;
+}
+
+.contenido-nosotros p {
+
+    color: var(--texto-suave);
+
+    font-size: 16px;
+
+    margin-bottom: 15px;
+
+    text-align: justify;
+}
+
+
+/* ================================
+   MISIÓN Y VISIÓN
+================================ */
+
+.mision-vision {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+
+    margin-bottom: 70px;
+}
+
+.tarjeta-info {
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 10px 30px rgba(121, 85, 72, 0.10);
+
+    border-top: 5px solid var(--azul);
+
+    transition: 0.3s ease;
+}
+
+.tarjeta-info:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 35px rgba(121, 85, 72, 0.15);
+}
+
+.info-icono {
+
+    font-size: 40px;
+
+    margin-bottom: 10px;
+}
+
+.tarjeta-info h2 {
+
+    color: var(--azul);
+
+    font-size: 27px;
+
+    margin-bottom: 15px;
+}
+
+.tarjeta-info p {
+
+    color: var(--texto-suave);
+
+    font-size: 15px;
+
+    margin-bottom: 12px;
+}
+
+
+/* ================================
+   VALORES
+================================ */
+
+.valores {
+
+    margin-bottom: 80px;
+}
+
+.subtitulo-seccion {
+
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+.subtitulo-seccion h2 {
+
+    color: var(--texto);
+
+    font-size: 35px;
+
+    margin: 10px 0;
+}
+
+.subtitulo-seccion p {
+
+    color: var(--texto-suave);
+
+    max-width: 650px;
+
+    margin: auto;
+}
+
+.valores-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 20px;
+}
+
+.valor {
+
+    background: white;
+
+    padding: 25px 20px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 7px 20px rgba(121, 85, 72, 0.09);
+
+    border-bottom: 4px solid var(--naranja);
+
+    transition: 0.3s ease;
+}
+
+.valor:hover {
+
+    transform: translateY(-7px);
+
+    border-bottom-color: var(--azul);
+}
+
+.valor-numero {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 45px;
+
+    height: 45px;
+
+    background: var(--naranja);
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.valor h3 {
+
+    color: var(--texto);
+
+    font-size: 18px;
+
+    margin-bottom: 8px;
+}
+
+.valor p {
+
+    color: var(--texto-suave);
+
+    font-size: 13px;
+}
+
+
+/* ================================
+   EQUIPO
+================================ */
+
+.equipo {
+
+    margin-top: 50px;
+}
+
+.equipo-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.tarjeta-equipo {
+
+    background: white;
+
+    padding: 30px 20px;
+
+    border-radius: 22px;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 25px rgba(121, 85, 72, 0.10);
+
+    border: 1px solid rgba(121, 85, 72, 0.08);
+
+    transition: 0.3s ease;
+}
+
+.tarjeta-equipo:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 18px 35px rgba(121, 85, 72, 0.16);
+}
+
+
+/* FOTO */
+
+.foto-equipo {
+
+    width: 150px;
+
+    height: 150px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    border: 6px solid var(--beige);
+
+    box-shadow:
+        0 6px 15px rgba(121, 85, 72, 0.15);
+}
+
+.foto-equipo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.4s ease;
+}
+
+.tarjeta-equipo:hover .foto-equipo img {
+
+    transform: scale(1.08);
+}
+
+.tarjeta-equipo h3 {
+
+    color: var(--texto);
+
+    font-size: 19px;
+
+    margin-bottom: 5px;
+}
+
+.tarjeta-equipo span {
+
+    color: var(--azul);
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    background: var(--azul-oscuro);
+
+    color: white;
+
+    padding: 55px 7% 20px;
+}
+
+.footer-contenido {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+
+    gap: 50px;
+}
+
+.logo-footer {
+    width: 130px;
+
+    margin-bottom: 15px;
+
+    background: white;
+
+    padding: 8px;
+
+    border-radius: 12px;
+}
+
+.footer-marca p,
+.footer-info p {
+    color: rgba(255, 255, 255, 0.80);
+
+    font-size: 13px;
+
+    max-width: 300px;
+}
+
+.footer-contenido h3 {
+    color: white;
+
+    font-size: 17px;
+
+    margin-bottom: 15px;
+}
+
+.footer-enlaces {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 8px;
+}
+
+.footer-enlaces a {
+    color: rgba(255, 255, 255, 0.80);
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: color 0.3s ease;
+}
+
+.footer-enlaces a:hover {
+    color: var(--naranja-claro);
+}
+
+
+/* Copyright */
+
+.copyright {
+    max-width: 1200px;
+
+    margin: 45px auto 0;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.20);
+
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 12px;
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 1000px) {
+
+    .valores-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .equipo-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+/* ================================
+   CELULAR
+================================ */
+
+@media (max-width: 700px) {
+
+    header {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 15px;
+    }
+
+    nav {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 18px;
+    }
+
+    .nosotros {
+
+        padding: 60px 20px;
+    }
+
+    .bloque-nosotros {
+
+        flex-direction: column;
+
+        padding: 25px;
+    }
+
+    .mision-vision {
+
+        grid-template-columns: 1fr;
+    }
+
+    .valores-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .equipo-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .contenido-nosotros p {
+
+        text-align: left;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .logo {
+
+        width: 120px;
+    }
+
+    nav {
+
+        gap: 12px;
+    }
+
+    nav a {
+
+        font-size: 13px;
+    }
+
+    .nosotros-header h1 {
+
+        font-size: 40px;
+    }
+
+    .bloque-nosotros {
+
+        padding: 22px;
+    }
+
+    .tarjeta-info {
+
+        padding: 25px;
+    }
+
+    .foto-equipo {
+
+        width: 130px;
+
+        height: 130px;
+    }
+}
+```
